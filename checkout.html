@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da janela -->
+    <title>Checkout RCHLO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <!-- Título da página (em destaque) -->
+        <h1>Ótima escolha!</h1>
+
+        <!-- Texto logo abaixo do título da página -->
+        <p>
+          Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a
+          compra.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="containerProduct">
+        <!-- Subtítulo, referente ao trecho sobre os dados do produto -->
+        <h2>Sua compra</h2>
+
+        <figure>
+          <!-- início dos dados do produto -->
+          <!-- imagem do produto -->
+          <div id="imageProduct">
+            <img
+              src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg"
+              alt="Produto em destaque"
+            />
+          </div>
+
+          <figcaption>
+            <!-- nome do produto -->
+            <h3>Produto</h3>
+            <p>
+              Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo
+            </p>
+
+            <!-- cor do produto -->
+            <h3>Cor</h3>
+            <p>Branco</p>
+
+            <!-- tamanho do produto -->
+            <h3>Tamanho</h3>
+            <p>G</p>
+
+            <!-- preço do produto -->
+            <h3>Preço</h3>
+            <p>R$ 69,90</p>
+
+            <!-- fim dos dados do produto -->
+          </figcaption>
+        </figure>
+      </section>
+
+      <form action="" name="form" id="form">
+        <!-- início do formulário -->
+        <!-- Título da seção de dados pessoais do formulário-->
+        <div>
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+
+              <label for="fullName">
+                Nome completo
+                <!-- colocar campo de texto aqui -->
+              </label>
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                maxlength="200"
+                required
+              />
+
+              <label for="email">
+                E-mail
+                <!-- colocar campo de email aqui -->
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@example.com"
+                maxlength="300"
+                pattern="^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$"
+                required
+              />
+              <span class="error"></span>
+
+              <label for="cpf">
+                CPF
+                <!-- colocar campo de texto aqui -->
+              </label>
+
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="000.000.000-00"
+                maxlength="14"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                title="Digite o CPF no formato 000.000.000-00"
+                required
+              />
+
+              <div id="alignCheckbox">
+                <input type="checkbox" name="subscribe" id="subscribe" />
+                <!-- colocar checkbox aqui -->
+                <label for="subscribe" id="checkbox"
+                  >Quero receber a newsletter da RCHLO!</label
+                >
+              
+            </fieldset>
+
+            <fieldset class="amountValue">
+              <label for="amount">Quantidade:</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                min="0"
+                max="5"
+                value=""
+                required
+              />
+
+              <label for="price">Total:</label>
+              <input
+                type="text"
+                name="price"
+                id="price"
+                value="R$ 0,00"
+                readonly
+              />
+            </fieldset>
+          </section>
+        </div>
+
+        <div>
+            <fieldset>
+              <!-- Título da seção de cartão de crédito do formulário-->
+              <legend>Cartão de crédito</legend>
+
+              <label for="flagCard">Bandeira</label>
+              <select name="flagCard" id="flagCard" required>
+                <option value="">Selecione uma opção...</option>
+                <option value="card">Visa</option>
+                <option value="card">Mastercard</option>
+                <option value="card">American Express</option>
+              </select>
+              <!-- colocar campo de seleção com as opções MasterCard, VISA e American Express -->
+
+              <label for="numberCard">Número</label>
+              <input
+                type="text"
+                name="numberCard"
+                id="numberCard"
+                maxlength="16"
+                placeholder="0000 0000 0000 0000"
+                pattern="[0-9]{16}"
+                required
+              />
+
+              <label for="shelfLife">Validade</label>
+              <input type="month" id="shelfLife" required />
+              <!-- colocar campo referente ao mês aqui -->
+
+              <label for="cvv">CVV</label>
+              <input
+                type="text"
+                name="cvv"
+                id="cvv"
+                maxlength="3"
+                pattern="[0-9]{3}"
+                title="Digite o código de segurança seguindo exemplo: 000"
+                placeholder="000"
+                required
+              />
+              <!-- colocar campo de texto aqui -->
+            </fieldset>
+          <!-- botão de submissão do formulário com o label a seguir -->
+          <button type="submit" id="submit">Confirmar Pedido</button>
+        </div>
+        <!-- fim do formulário -->
+      </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 - Up!Tech Test - FrontEnd by Maciel Francisco</p>
+    </footer>
+  </body>
+  <script src="scripts.js"></script>
+</html>
